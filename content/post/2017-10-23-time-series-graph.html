@@ -1,0 +1,32 @@
+---
+title: Time Series Graph
+author: Dominic Mariano
+date: '2017-10-23'
+slug: time-series-graph
+categories:
+  - R
+tags:
+  - Time Series
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(devtools)
+library(ggplot2)</code></pre>
+<pre class="r"><code># extracting the data------------------------ 
+  
+query&lt;-&quot;SELECT yearID,HR 
+FROM Teams 
+Where teamID=&#39;NYA&#39;&quot; 
+  
+result&lt;-sqldf(query) 
+  
+#visualize the data------------------- 
+  
+ggplot()+ 
+  geom_line(data=result,aes(x=yearID,y=HR))+ 
+  xlab(&#39;year&#39;)+ 
+  ylab(&#39;homeruns&#39;) </code></pre>
+<p><img src="/post/2017-10-23-time-series-graph_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>

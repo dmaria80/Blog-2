@@ -1,0 +1,35 @@
+---
+title: Time Series Graph
+author: Dominic Mariano
+date: '2017-10-23'
+slug: time-series-graph
+categories:
+  - R
+tags:
+  - Time Series
+---
+
+```{r message=FALSE,warning=FALSE}
+library(Lahman)
+library(sqldf)
+library(devtools)
+library(ggplot2)
+```
+
+```{r message=FALSE,warning=FALSE}
+# extracting the data------------------------ 
+  
+query<-"SELECT yearID,HR 
+FROM Teams 
+Where teamID='NYA'" 
+  
+result<-sqldf(query) 
+  
+#visualize the data------------------- 
+  
+ggplot()+ 
+  geom_line(data=result,aes(x=yearID,y=HR))+ 
+  xlab('year')+ 
+  ylab('homeruns') 
+ 
+```
