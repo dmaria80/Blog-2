@@ -1,0 +1,29 @@
+---
+title: Histogram
+author: Dominic Mariano
+date: '2017-10-24'
+slug: histogram
+categories:
+  - R
+tags:
+  - Histogram
+---
+
+```{r message=FALSE, warning=FALSE}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+```
+
+```{r message=FALSE, warning=FALSE}
+query<-"SELECT weight FROM Master"
+
+result<-sqldf(query)
+
+#visualizing the data
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="green",fill="black",bins=50)+
+  ggtitle("Baseball Player Body-Weight Distribution")
+```
+

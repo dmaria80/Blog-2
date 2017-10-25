@@ -1,0 +1,33 @@
+---
+title: Scatterplot
+author: Dominic Mariano
+date: '2017-10-24'
+slug: scatterplot
+categories:
+  - R
+tags:
+  - Scatterplot
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(devtools)
+library(ggplot2)</code></pre>
+<pre class="r"><code>#extracting data
+
+query&lt;-&quot;SELECT playerID,sum(HR) AS career_HR,
+sum(SO) AS career_SO FROM Batting 
+GROUP BY playerID HAVING sum(HR)&gt;=400&quot;
+
+result&lt;-sqldf(query)
+
+#visualizing data
+
+ggplot()+
+  geom_point(data=result,aes(x=career_SO,y=career_HR), size=1,color=&quot;Blue&quot;)+
+  ggtitle(&quot;Career Strikeouts v. Homeruns for Great Hitters&quot;)+
+  xlab(&quot;Career Strikeouts&quot;)+
+  ylab(&quot;Career Homeruns&quot;)</code></pre>
+<p><img src="/post/2017-10-24-scatterplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>

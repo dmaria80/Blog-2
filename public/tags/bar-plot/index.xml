@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bar Plot on Dominic Mariano&#39;s blog</title>
-    <link>/tags/bar-plot/</link>
+    <link>https://dominicmarianoblog.netlify.com/tags/bar-plot/</link>
     <description>Recent content in Bar Plot on Dominic Mariano&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/bar-plot/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dominicmarianoblog.netlify.com/tags/bar-plot/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bar Plot</title>
-      <link>/post/bar-plot/</link>
+      <link>https://dominicmarianoblog.netlify.com/post/bar-plot/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/bar-plot/</guid>
+      <guid>https://dominicmarianoblog.netlify.com/post/bar-plot/</guid>
       <description>library(Lahman) library(sqldf) library(devtools) library(ggplot2) # extracting the data---------------------------- query&amp;lt;-&amp;quot;SELECT name,HR FROM Teams Where yearID=1980 ORDER BY HR&amp;quot; result&amp;lt;-sqldf(query) result$name&amp;lt;-factor(result$name,levels=result$name) # visualizing the data----------------------------- ggplot()+ geom_bar(data=result,aes(x=name,y=HR),stat=&amp;#39;identity&amp;#39;,color=&amp;#39;blue&amp;#39;,fill=&amp;#39;white&amp;#39;)+ coord_flip()+ ylab(&amp;quot;homeruns&amp;quot;)+ xlab(&amp;quot;team&amp;quot;)+ ggtitle(&amp;quot;1980 Team Homerun Distribution&amp;quot;) </description>
     </item>
     

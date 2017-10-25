@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Time Series on Dominic Mariano&#39;s blog</title>
-    <link>/tags/time-series/</link>
+    <link>https://dominicmarianoblog.netlify.com/tags/time-series/</link>
     <description>Recent content in Time Series on Dominic Mariano&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
     <lastBuildDate>Mon, 23 Oct 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dominicmarianoblog.netlify.com/tags/time-series/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Time Series Graph</title>
-      <link>/post/time-series-graph/</link>
+      <link>https://dominicmarianoblog.netlify.com/post/time-series-graph/</link>
       <pubDate>Mon, 23 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/time-series-graph/</guid>
+      <guid>https://dominicmarianoblog.netlify.com/post/time-series-graph/</guid>
       <description>library(Lahman) library(sqldf) library(devtools) library(ggplot2) # extracting the data------------------------ query&amp;lt;-&amp;quot;SELECT yearID,HR FROM Teams Where teamID=&amp;#39;NYA&amp;#39;&amp;quot; result&amp;lt;-sqldf(query) #visualize the data------------------- ggplot()+ geom_line(data=result,aes(x=yearID,y=HR))+ xlab(&amp;#39;year&amp;#39;)+ ylab(&amp;#39;homeruns&amp;#39;)  </description>
     </item>
     

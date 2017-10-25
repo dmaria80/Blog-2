@@ -1,0 +1,26 @@
+---
+title: Histogram
+author: Dominic Mariano
+date: '2017-10-24'
+slug: histogram
+categories:
+  - R
+tags:
+  - Histogram
+---
+
+
+
+<pre class="r"><code>library(Lahman)
+library(sqldf)
+library(ggplot2)</code></pre>
+<pre class="r"><code>query&lt;-&quot;SELECT weight FROM Master&quot;
+
+result&lt;-sqldf(query)
+
+#visualizing the data
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color=&quot;green&quot;,fill=&quot;black&quot;,bins=50)+
+  ggtitle(&quot;Baseball Player Body-Weight Distribution&quot;)</code></pre>
+<p><img src="/post/2017-10-24-histogram_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
